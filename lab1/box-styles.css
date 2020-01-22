@@ -1,0 +1,153 @@
+
+/* --------Override default margins from the browser--------  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ /*------------Padding--------------- */
+
+/*h1 {*/
+/*    padding: 50px;*/
+/*}*/
+.page {
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #5D6063;
+}
+
+/*.center-words*/
+/*{*/
+/*    text-align: center;*/
+/*}*/
+
+/*div*/
+/*{*/
+/*    display: inline-block;*/
+/*}*/
+
+h2
+{
+    text-align: center;
+}
+
+
+
+
+em, strong {
+    background-color: #B2D6FF;    /* Light blue */
+    display: block;
+    /*padding: 50px;*/
+}
+
+ /*------------------Borders------------------  */
+
+/*h1 {*/
+/*    padding: 50px;*/
+/*    border: 1px solid #5D6063;*/
+/*}*/
+
+ /*---------Margins-----------*/
+/*p {*/
+/*    padding: 20px 0 20px 10px;*/
+
+/*    margin-top: 25px;*/
+/*    margin-bottom: 50px;*/
+/*}*/
+
+p:first-of-type {
+    color: #7E8184;
+    font-style: italic;
+}
+
+div {
+    /*color: red;*/
+}
+
+.first_para
+{
+    color: #7E8184;        /* Light gray */
+    font-style: italic;
+    /*background-color: red;*/
+}
+
+.button
+{
+    color: #FFF;
+    background-color: #5995DA;    /* Blue */
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #5D6063;    /* Dark gray */
+    border-radius: 5px;
+
+    width: 200px;
+    margin: 20px auto;
+}
+
+.button:link,                 /* Change this */
+.button:visited {             /* Change this */
+    display: block;             /* Add this */
+    text-decoration: none;      /* Add this */
+
+    color: #FFF;                /* The rest is the same */
+    background-color: #5995DA;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+
+    width: 200px;
+    margin: 20px auto;
+}
+
+.button:hover,
+.button:visited:hover {
+    color: #FFF;
+    background-color: #76AEED;  /* Light blue */
+}
+
+.button:active,
+.button:visited:active {
+    color: #FFF;
+    background-color: #5995DA;  /* Blue */
+}
+
+.call-to-action:link,
+.call-to-action:visited {
+    font-style: italic;
+    background-color: #EEB75A;     /* Yellow */
+}
+
+.call-to-action:hover,
+.call-to-action:visited:hover {
+    background-color: #F5CF8E;     /* Light yellow */
+}
+
+.call-to-action:active,
+.call-to-action:visited:active {
+    background-color: #EEB75A;     /* Yellow */
+}
+
+.call-to-action:link,
+.call-to-action:visited {
+    background-color: #D55C5F;    /* Red */
+}
+
+p:last-of-type
+{
+    margin-bottom: 50px;
+}
+
+#button-2 {
+    background-color: #D55C5F;    /* Red */
+}
+
+#button-2:hover
+{
+    background-color: #EEB75A;
+}
+
