@@ -29,6 +29,7 @@
 .content {
     background-color: #EAEDF0;
     height: 600px;
+    flex-direction: column;
 }
 
 .sign-up {
@@ -45,6 +46,19 @@
 
 .feature-3 {
     background-color: #C8C6FA;
+}
+.sky-image {
+    /*display: flex;*/
+    /*align-items: center;*/
+    width: 80%;
+    height: 500px;
+    order: 1;
+    /*align-content: center;*/
+}
+
+.content_text
+{
+    order: 2;
 }
 
 /* Mobile Styles */

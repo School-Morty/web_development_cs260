@@ -49,3 +49,49 @@
 .subscribe {
     border: 1px solid #5995DA;
 }
+
+.separator
+{
+    color: black;
+    background-color: #4dd2ff;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.footer-container
+{
+    color: #D6E9FE;
+    background-color: #5995DA;
+    display: flex;
+    justify-content: center;
+}
+
+.footer
+{
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  /* Add this */
+}
+
+.footer-left
+{
+    padding:10px;
+    border: 5px solid #4dd2ff;
+
+}
+
+.footer-middle
+{
+    padding:10px;
+    border: 5px solid #4dd2ff;
+
+}
+
+.footer-right
+{
+    padding:10px;
+    border: 5px solid #4dd2ff;
+}
