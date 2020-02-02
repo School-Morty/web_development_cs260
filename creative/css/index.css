@@ -9,9 +9,9 @@
 
 body
 {
-    background-image: url("../images/test_background.jpg");
+    background-image: url("../images/main-page-background.jpg");
     background-repeat: repeat;
-    background-size: 100%;
+    background-size: cover;
     /*background-color: red;*/
     /*color: red;*/
 }
@@ -30,6 +30,17 @@ img
 /*    padding: 100px;*/
 /*    !*text-align: center;*!*/
 /*}*/
+
+.page
+{
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+}
+
+.center-text
+{
+    text-align: center;
+}
 
 .top-logo
 {
@@ -84,14 +95,14 @@ img
 {
     opacity: 1;
     top: 0;
-    left: 540px;
+    left: 520px;
     /*right: 600px;*/
     width: 20%;
 
     position: absolute;
     padding: 0 0 0 0;
     /*margin: 0 0 0 0;*/
-    margin-top: -6px;
+    margin-top: -17px;
 
 }
 
@@ -159,19 +170,110 @@ a #menu-logo
     /*height: 80px;*/
 }
 
-
-
-.nav-link
-{
-    /*font-size: 10px;*/
-}
-
 #sign-up-link
 {
-    float: right;
+    /*float: right;*/
     /*display: flex;*/
     /*align-content: end;*/
+    color: #B2D6FF;
 }
+
+#sign-up-link:hover
+{
+    color: #111111;
+}
+
+
+.main-page-saying
+{
+    /*opacity: .20;*/
+    text-align: center;
+    background-color: #111111;
+    font-family: Helvetica, sans-serif;
+}
+
+.dota-image
+{
+    /*filter: (opacity=100); !* For IE8 and earlier *!*/
+    /*mix-blend-mode: multiply;*/
+    /*background-color: rgba(255, 255, 255, 1.0);*/
+    /*filter: gray(1000);*/
+    opacity:.7;
+}
+
+.test-space
+{
+    width: 1000px;
+}
+
+/* -----Footer----- */
+.page-footer
+{
+    background-color: #7E8184;
+}
+
+.pt-4, .py-4
+{
+    padding-top: 0rem !important;
+    /*align-content: center;*/
+}
+
+.pb-3, .py-3
+{
+    padding-top: 0rem !important;
+    padding-bottom: 1rem !important;
+}
+
+dl, ol, ul
+{
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.list-inline-item
+{
+    width: 5%;
+}
+
+.list-inline-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+
+.left-social-footer
+{
+    float: left;
+    position: absolute;
+    left: 180px;
+    bottom: 5px;
+    text-align: center;
+    width: 20%;
+    margin-left: -200px;
+}
+
+.footer-copyright
+{
+
+}
+
+.copy-right-link
+{
+    color: #E0E0E0;
+}
+
+a:link
+{
+    text-decoration: none;
+
+}
+
+a:hover
+{
+    color: black;
+}
+
+
+
 
 @media (min-width: 992px)
 {
