@@ -12,8 +12,15 @@ body
     background-image: url("../images/main-page-background.jpg");
     background-repeat: repeat;
     background-size: cover;
-    /*background-color: red;*/
-    /*color: red;*/
+}
+
+.main-page
+{
+    background-image: url("../images/dota2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 img
@@ -31,11 +38,17 @@ img
 /*    !*text-align: center;*!*/
 /*}*/
 
-.page
-{
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-}
+/*.main-page-saying img*/
+/*{*/
+/*    !*display: flex;*!*/
+/*    !*flex-wrap: wrap;*!*/
+/*    background-image: url("../images/dota2.jpg");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    background-attachment: fixed;*/
+/*    background-position: center center;*/
+
+/*}*/
 
 .center-text
 {
@@ -107,7 +120,6 @@ img
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    /*padding-right: 100px;*/
     width: 300px;
     margin-right: 100px;
 }
@@ -313,7 +325,6 @@ a:hover
     .menu-logo
     {
         left: 460px;
-        /*width: 21%;*/
     }
 }
 
@@ -322,7 +333,7 @@ a:hover
     .menu-logo
     {
         left: 445px;
-        /*width: 21%;*/
+        width: 22%;
     }
 }
 
@@ -331,8 +342,7 @@ a:hover
     .menu-logo
     {
         margin-left: -15px;
-        /*left: 425px;*/
-        width: 22%;
+        /*width: 22%;*/
     }
 }
 
@@ -341,8 +351,6 @@ a:hover
     .menu-logo
     {
         margin-left: -30px;
-        /*left: 425px;*/
-        /*width: 23%;*/
     }
 }
 
@@ -351,7 +359,6 @@ a:hover
     .menu-logo
     {
         margin-left: -45px;
-        /*left: 425px;*/
         width: 23%;
     }
 }
@@ -373,11 +380,45 @@ a:hover
     }
 }
 
-@media (max-width: 992px)
+@media (max-width: 991px)
 {
     .left-social-footer
     {
         font-size: 0.9em;
+    }
+
+    .navbar-nav
+    {
+        /*display: flex;*/
+        flex-flow: row;
+        /*align-items: center;*/
+        /*justify-content: space-between;*/
+        /*width: 100%;*/
+        /*position: relative;*/
+    }
+    .left-header
+    {
+        /*display: flex;*/
+        /*flex-flow: row nowrap;*/
+        /*justify-content: space-between;*/
+        width: 250px;
+        margin-left: 20px;
+    }
+    .right-header
+    {
+        /*display: flex;*/
+        /*flex-flow: row nowrap;*/
+        /*justify-content: space-between;*/
+        width: 250px;
+        margin-left: 100px;
+    }
+
+    .menu-logo
+    {
+        /*opacity: 1;*/
+        /*width: 38%;*/
+        /*left: 350px;*/
+        /*margin-top: -55px;*/
     }
 }
 
@@ -386,6 +427,10 @@ a:hover
     .left-social-footer
     {
         font-size: 0.8em;
+    }
+    .menu-logo
+    {
+        opacity: 0;
     }
 }
 
@@ -412,7 +457,6 @@ a:hover
         font-size: 0.5em;
         bottom: 10px;
         right: 100px;
-        /*margin-top: 2px;*/
     }
 }
 
@@ -420,35 +464,51 @@ a:hover
 {
     .left-social-footer
     {
-        /*font-size: 0.5em;*/
-        /*bottom: 100px;*/
-        /*right: 100px;*/
-        /*margin-top: -22px;*/
         margin-left: -180px;
+    }
 
+    #sign-up-link
+    {
+        margin-right: 20px;
     }
 }
 
-/*@media (max-width: 677px)*/
-/*{*/
-/*    .footer-copyright*/
-/*    {*/
-/*        font-size: 0.4em;*/
-/*    }*/
-/*}*/
+@media (max-width: 625px)
+{
 
-/*@media (max-width: 614px)*/
-/*{*/
-/*    .footer-copyright*/
-/*    {*/
-/*        font-size: 0.3em;*/
-/*    }*/
-/*}*/
+    #sign-up-link
+    {
+        margin-right: 40px;
+    }
+}
 
-/*@media (max-width: 551px)*/
-/*{*/
-/*    .footer-copyright*/
-/*    {*/
-/*        font-size: 0.2em;*/
-/*    }*/
-/*}*/
+@media (max-width: 600px)
+{
+
+    #sign-up-link
+    {
+        margin-right: 60px;
+    }
+    .team-link
+    {
+        margin-left: -110px;
+    }
+}
+
+@media (max-width: 590px)
+{
+
+    #sign-up-link
+    {
+        margin-left: -30px;
+    }
+
+    .right-header
+    {
+        margin-left: 10px;
+    }
+    /*.team-link*/
+    /*{*/
+    /*    margin-left: -130px;*/
+    /*}*/
+}
