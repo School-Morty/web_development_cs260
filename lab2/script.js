@@ -92,7 +92,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
             max_4++;
             temp_forecast = "";
         }
-
+    return weekly_forecast;
         // document.getElementById("forecastResults").innerHTML = weekly_forecast[test_index];
         // test_index++;
         // document.getElementById("forecastResults").innerHTML = forecast;
@@ -124,7 +124,7 @@ document.getElementById("next_4_hours").addEventListener("click", function(event
     let child = e.lastElementChild;
     while (child)
     {
-        // console.log("did it romove anything???");
+        console.log("did it romove anything???");
         e.removeChild(child);
         child = e.lastElementChild;
     }
@@ -173,7 +173,7 @@ document.getElementById("previous_4_hours").addEventListener("click", function(e
 
     let e = document.getElementById("forecastResults");
 
-    //e.firstElementChild can be used.
+    // e.firstElementChild can be used.
     let child = e.lastElementChild;
     while (child)
     {
@@ -182,7 +182,7 @@ document.getElementById("previous_4_hours").addEventListener("click", function(e
         child = e.lastElementChild;
     }
 
-    // sleep(3000);
+    sleep(3000);
 
     let i = 0;
     let four_hour_forecast = [];
