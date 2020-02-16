@@ -32,7 +32,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
         }).then(function(json) {
 
 
-        //Outputs results from the weather API JSON file to the .html page.
+            //Outputs results from the weather API JSON file to the .html page.
 
         let results = "";
         results += '<h2>Weather in ' + json.name + "</h2>";
