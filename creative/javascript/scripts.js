@@ -280,40 +280,40 @@ document.getElementById("match-submit").addEventListener("click", function (even
 
 
 
-    // let steam_32 = (bignumber('76561198097446318').minus('76561197960265728'));
-
-
-
-        // const url2 = "https://api.opendota.com/api/players/137180590/wl";
-        const url2 = "https://api.opendota.com/api/players/114650188/recentMatches";
-    // const url2 = "https://api.opendota.com/api/players/76561198097446318";
-    fetch(url2)
-        .then(function(response) {
-            return response.json();
-        }).then(function(json) {
-        let results = "";
-
-        console.log(json);
-
-        results += "<p style='color: white'>";
-
-
-        // for(let i = 0; i < json.length; i++)
-        // {
-        //
-        //     results += json[i] + '\n';
-        // }
-
-        // results += json[0].match_id;
-        // results += json[0].game_mode;
-        // results += json[0].kills;
-
-        // results += json.first_blood_time + '\n';
-        results += "</p>";
-
-
-        document.getElementById("test").innerHTML = results;
-    });
+    // // let steam_32 = (bignumber('76561198097446318').minus('76561197960265728'));
+    //
+    //
+    //
+    //     // const url2 = "https://api.opendota.com/api/players/137180590/wl";
+    //     const url2 = "https://api.opendota.com/api/players/114650188/recentMatches";
+    // // const url2 = "https://api.opendota.com/api/players/76561198097446318";
+    // fetch(url2)
+    //     .then(function(response) {
+    //         return response.json();
+    //     }).then(function(json) {
+    //     let results = "";
+    //
+    //     console.log(json);
+    //
+    //     // results += "<p style='color: white'>";
+    //
+    //
+    //     // for(let i = 0; i < json.length; i++)
+    //     // {
+    //     //
+    //     //     results += json[i] + '\n';
+    //     // }
+    //
+    //     // results += json[0].match_id;
+    //     // results += json[0].game_mode;
+    //     // results += json[0].kills;
+    //
+    //     // results += json.first_blood_time + '\n';
+    //     results += "</p>";
+    //
+    //
+    //     document.getElementById("test").innerHTML = results;
+    // });
 
 
 
@@ -462,12 +462,12 @@ function getHeroFromID(hero_id)
         case 112: return "Winter Wyvern";
         case 113: return "Arc Warden";
         case 114: return "Monkey King";
-        case 115: return "Dark Willow";
-        case 116: return "Pangolier";
-        case 117: return "Grimstroke";
-        case 118: return "Void Spirit";
-        case 119: return "Snapfire";
-        case 120: return "Mars";
+        case 119: return "Dark Willow";
+        case 120: return "Pangolier";
+        case 121: return "Grimstroke";
+        case 126: return "Void Spirit";
+        case 128: return "Snapfire";
+        case 129: return "Mars";
         default: return "Unknown";
     }
 }
