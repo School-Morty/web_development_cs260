@@ -12,6 +12,7 @@ body
     background-image: url("../images/main-page-background.jpg");
     background-repeat: repeat;
     background-size: cover;
+
 }
 
 .main-page
@@ -26,6 +27,116 @@ body
 img
 {
     width: 100%;
+}
+
+table, th, td
+{
+    border: 1px solid black;
+}
+
+table
+{
+
+
+    /*width: 100%;*/
+    border-spacing: 5px;
+    /*margin-left: 17px;*/
+    padding-left: 10px;
+    /* How to keep this centered?? It minimizes well, but doesn't initiallly display in the middle. */
+    position: sticky;
+    width: 100%;
+
+}
+
+#match-results
+{
+    width: 100%;
+}
+
+.individual-bottom-margin
+{
+    margin-bottom: 50px;
+}
+
+table#individual-stats
+{
+    left: 0;
+}
+
+table#individual-stats th
+{
+    text-align: center;
+    border: 1px solid grey;
+    justify-content: center;
+}
+
+table#individual-stats th, table#individual-stats td
+{
+    padding: 5px;
+}
+
+table#individual-stats tr:nth-child(even)
+{
+    background-color: #303030;
+    border-right: 2px solid grey;
+    border-left: 2px solid grey;
+    /*border-right: 2px solid lightgray;*/
+    /*border-left: 2px solid lightgray;*/
+
+}
+table#individual-stats tr:nth-child(odd)
+{
+    background-color: #202020;
+    border-right: 2px solid grey;
+    border-left: 2px solid grey;
+    /*border-right: 2px solid lightgray;*/
+    /*border-left: 2px solid lightgray;*/
+}
+table#individual-stats th
+{
+    color: white;
+    background-color: black;
+}
+
+table#individual-stats tr:nth-last-child(1)
+{
+    background-color: #202020;
+    border-bottom: 2px solid grey;
+}
+
+.radiant-image-cell
+{
+    /*padding-right: -150px;*/
+    /*align: right;*/
+    text-align: right;
+}
+
+.dire-image-cell
+{
+    margin-right: -100px;
+}
+
+.radiant-image
+{
+    width: 30%;
+}
+
+.dire-image
+{
+    width: 30%;
+}
+
+.center-container
+{
+    color: white;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    position: relative;
+
+    /*flex-wrap: wrap;*/
+    /*flex-direction: row;*/
+    justify-content: center;
 }
 
 /*.top-header*/
@@ -278,6 +389,53 @@ a:hover
     color: black;
 }
 
+@media (min-width: 2400px)
+{
+    .menu-logo
+    {
+        margin-left: 400px;
+        margin-right: -300px;
+        width: 12%;
+
+    }
+}
+
+@media (min-width: 2300px)
+{
+    .menu-logo
+    {
+        margin-left: 300px;
+        width: 16%;
+
+    }
+}
+
+@media (min-width: 2000px)
+{
+    .menu-logo
+    {
+        left: 930px;
+        margin-left: 250px;
+        width: 18%;
+
+    }
+}
+
+@media (min-width: 1700px)
+{
+    .menu-logo
+    {
+        left: 800px
+    }
+}
+
+@media (min-width: 1600px)
+{
+    .menu-logo
+    {
+        left: 650px
+    }
+}
 
 
 @media (max-width: 1340px)
@@ -285,6 +443,16 @@ a:hover
     .menu-logo
     {
         left: 500px;
+    }
+
+    table
+    {
+        position: fixed;
+    }
+
+    .individual-bottom-margin
+    {
+        width: 80%;
     }
 }
 
@@ -310,6 +478,15 @@ a:hover
     {
         left: 470px;
     }
+
+    table
+    {
+        /*width: 60%;*/
+        /*!*width: 100%;*!*/
+        /*border-spacing: 1px;*/
+        /*!*margin-left: 17px;*!*/
+        /*padding-left: 2px;*/
+    }
 }
 
 @media (max-width: 1222px)
@@ -318,6 +495,16 @@ a:hover
     {
         width: 21%;
     }
+
+    table#individual-stats td
+    {
+        word-break: break-all;
+    }
+
+    /*table*/
+    /*{*/
+    /*    position: relative;*/
+    /*}*/
 }
 
 @media (max-width: 1210px)
@@ -371,6 +558,20 @@ a:hover
     }
 }
 
+@media (max-width: 1080px)
+{
+    table#individual-stats td
+    {
+
+        word-wrap: break-word;
+    }
+
+    /*table*/
+    /*{*/
+    /*    position: fixed;*/
+    /*}*/
+}
+
 @media (min-width: 992px)
 {
     .navbar-expand-lg .navbar-nav .nav-link .navbar-brand #menu-logo
@@ -382,6 +583,7 @@ a:hover
 
 @media (max-width: 991px)
 {
+
     .left-social-footer
     {
         font-size: 0.9em;
@@ -391,6 +593,7 @@ a:hover
     {
         /*display: flex;*/
         flex-flow: row;
+        left: 0;
         /*align-items: center;*/
         /*justify-content: space-between;*/
         /*width: 100%;*/

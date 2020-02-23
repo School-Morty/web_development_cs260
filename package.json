@@ -1,0 +1,8 @@
+{
+  "name": "web_development_cs260",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "bignumber.js": "^9.0.0"
+  }
+}
