@@ -114,8 +114,29 @@ document.getElementById("match-submit").addEventListener("click", function (even
         team_table += "<th class=\"radiant-image-cell\">";
         team_table += "<img class=\"radiant-image\" src=\"/images/radiant.jpg\"/>";
         team_table += "</th>";
-        team_table += "<th>" + "Radiant" + "</th>";
-        team_table += "<th>" + "Dire" + "</th>";
+
+        let dotacougs_radiant = false;
+        for(let i = 0; i < json.players.length; i++)
+        {
+            if(isDotacougsRadiant(json.players[i].personaname))
+            {
+                dotacougs_radiant = true;
+                break;
+            }
+        }
+
+
+        if(dotacougs_radiant)
+        {
+            team_table += "<th style='color: #ccffff; background-image: linear-gradient(to right, rgba(18,39,134,1), rgba(18,39,134,0))'>" + "Dotacougs" + "</th>";
+            team_table += "<th style='color: #ffffcc; background-image: linear-gradient(to right, rgba(160,30,25,1), rgba(160,30,25,0))'>" + "Dire" + "</th>";
+        }
+        else
+        {
+            team_table += "<th style='color: #ccffff; background-image: linear-gradient(to right, rgba(18,39,134,1), rgba(18,39,134,0))'>" + "Radiant" + "</th>";
+            team_table += "<th style='color: #ffffcc; background-image: linear-gradient(to right, rgba(160,30,25,1), rgba(160,30,25,0))'>" + "Dotacougs" + "</th>";
+        }
+
         team_table += "<th align=\'right\' class=\"dire-image-cell\">";
         team_table += "<img class=\"dire-image\" src=\"/images/dire.jpg\"/>";
         team_table += "</th>";
@@ -125,7 +146,7 @@ document.getElementById("match-submit").addEventListener("click", function (even
 
 
         let game_mode = "";
-        game_mode = teamRowsSame("Game Mode", game_modes[json.game_mode]);
+        game_mode = teamRowsSame("Game Mode", getGameMode(json.game_mode));
 
         let duration = "";
         duration = teamRowsSame("Duration", (json.duration / 60).toFixed(2));
@@ -191,23 +212,40 @@ document.getElementById("match-submit").addEventListener("click", function (even
 
             for(let i = 0; i < json.players.length; i++)
             {
-                individual_table += "<tr>";
+                if(json.players[i].isRadiant)
+                {
+                    individual_table += "<tr style='background-image: linear-gradient(to right, rgba(18,39,134,1), rgba(18,39,134,0))'>";
+
+                }
+                else
+                {
+                    individual_table += "<tr style='background-image: linear-gradient(to right, rgba(160,30,25,1), rgba(160,30,25,0))'>";
+                }
+
 
                 if(json.players[i].personaname === undefined)
                 {
-                    if(i > 4)
+                    if(json.players[i].isRadiant)
                     {
-                        individual_table += "<td>" + "Dire " + (i+1 - (5)) + "</td>";
+                        individual_table += "<td style='color: #ccffff'>" + "Radiant " + (i+1) + "</td>";
                     }
                     else
                     {
-                        individual_table += "<td>" + "Radiant " + (i+1) + "</td>";
+                        individual_table += "<td style='color: #ffffcc'>" + "Dire " + (i+1 - (5)) + "</td>";
                     }
 
                 }
                 else
                 {
-                    individual_table += "<td>" + json.players[i].personaname + "</td>";
+                    if(json.players[i].isRadiant)
+                    {
+                        individual_table += "<td style='color: #ccffff'>" + json.players[i].personaname + "</td>";
+                    }
+                    else
+                    {
+                        individual_table += "<td style='color: #ffffcc'>" + json.players[i].personaname + "</td>";
+                    }
+
                 }
 
                 individual_table += "<td>" + getHeroFromID(json.players[i].hero_id) + "</td>";
@@ -344,6 +382,39 @@ function teamRowsDiff(rowName, cellStatRadiant, cellStatDire)
     return table;
 }
 
+function getGameMode(mode_id)
+{
+    switch (mode_id)
+    {
+        case 0: return "Unknown";
+        case 1: return "All Pick";
+        case 2: return "Captains Mode";
+        case 3: return "Random Draft";
+        case 4: return "Single Draft";
+        case 5: return "All Random";
+        case 6: return "Intro";
+        case 7: return "Diretide";
+        case 8: return "Reverse Captains Draft";
+        case 9: return "Greeviling";
+        case 10: return "Tutorial";
+        case 11: return "Mid Only";
+        case 12: return "Least Played";
+        case 13: return "Limited Heroes";
+        case 14: return "Compendium Matchmaking";
+        case 15: return "Custom";
+        case 16: return "Captains Draft";
+        case 17: return "Balanced Draft";
+        case 18: return "Ability Draft";
+        case 19: return "Event";
+        case 20: return "All Random Death Match";
+        case 21: return "1v1";
+        case 22: return "All Draft";
+        case 23: return "Turbo";
+        case 24: return "Mutation";
+        default: return "Unknown";
+    }
+}
+
 function getHeroFromID(hero_id)
 {
     switch(hero_id)
@@ -469,6 +540,19 @@ function getHeroFromID(hero_id)
         case 128: return "Snapfire";
         case 129: return "Mars";
         default: return "Unknown";
+    }
+}
+
+function isDotacougsRadiant(person_name)
+{
+    if(person_name === "Quiet" || person_name === "♪♫Twilitwolf♫♪" || person_name === "natekronos"
+        || person_name === "NumNeNumNe" || person_name === "3Gundi" || person_name === "CrossCountryMan")
+    {
+        return true;
+    }
+    else
+    {
+       return false;
     }
 }
 
