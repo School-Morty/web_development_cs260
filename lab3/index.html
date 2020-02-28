@@ -8,51 +8,116 @@
 </head>
 
 <body>
-  <h1>XKCD Browser</h1>
-  <div id="app">
-    <div v-if="loading">
-      <p>Loading...</p>
-    </div>
-    <div v-else>
-      <p>
-        <button v-on:click="previousComic">Previous</button>
-        <button v-on:click="nextComic">Next</button>
-        <button v-on:click="randomComic">Random</button>
-        <button v-on:click="firstComic">First Comic</button>
-        <button v-on:click="lastComic">Last Comic</button>
-      </p>
-      <h2>{{current.title}}</h2>
-      <img v-bind:src="current.img" v-bind:alt="current.alt">
-      <p>{{current.alt}}</p>
-      <p><i>#{{current.num}}, drawn on {{current.day}} {{month}} {{current.year}}</i></p>
-
-      <star-rating @rating-selected ="setRating" v-bind:increment="0.5" v-bind:show-rating="false" inactive-color="#CA533A" active-color="#E7340E"></star-rating>
-      <p>Average Rating: {{getAvg}}</p>
-
-      <h3>Add a Comment</h3>
-      <form v-on:submit.prevent="addComment">
-        <input v-model="addedName" placeholder="Name"></p>
-        <textarea v-model="addedComment"></textarea>
-        <br />
-        <button type="submit">Comment</button>
-      </form>
-    </div>
-      <h3>Comments</h3>
-      <div v-for="comment in comments[number]">
-        <hr>
-        <p>{{comment.text}}</p>
-        <p><i>-- {{comment.author}}</i></p>
-        <p>{{comment.date}}</p>
-    </div>
+<h1>XKCD Browser</h1>
+<div id="app">
+  <div v-if="loading">
+    <p>Loading...</p>
   </div>
-  <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="/script.js"></script>
-    <script src="moment.js"></script>
-    <script>
-      moment().format();
-    </script>
+  <div v-else>
+    <p>
+      <button v-on:click="previousComic">Previous</button>
+      <button v-on:click="nextComic">Next</button>
+      <button v-on:click="randomComic">Random</button>
+      <button v-on:click="firstComic">First Comic</button>
+      <button v-on:click="lastComic">Last Comic</button>
+    </p>
+    <h2>{{current.title}}</h2>
+    <img v-bind:src="current.img" v-bind:alt="current.alt">
+    <p>{{current.alt}}</p>
+    <p><i>#{{current.num}}, drawn on {{current.day}} {{month}} {{current.year}}</i></p>
+
+    <star-rating @rating-selected ="setRating" v-bind:increment="0.5" v-bind:show-rating="false" inactive-color="#CA533A" active-color="#E7340E"></star-rating>
+    <p>Average Rating: {{getAvg}}</p>
+
+    <h3>Add a Comment</h3>
+    <form v-on:submit.prevent="addComment">
+      <input v-model="addedName" placeholder="Name"></p>
+      <textarea v-model="addedComment"></textarea>
+      <br />
+      <button type="submit">Comment</button>
+    </form>
+  </div>
+  <h3>Comments</h3>
+  <div v-for="comment in comments[number]">
+    <hr>
+    <p>{{comment.text}}</p>
+    <p><i>-- {{comment.author}}</i></p>
+    <p>{{comment.date}}</p>
+  </div>
+</div>
+
+</footer>
+<!-- Footer -->
+<!-- End of page -->
+</div>
+<footer class="page-footer fixed-bottom font-small special-color-dark pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <!--        <li class="list-inline-item left-social-footer">-->
+      <!--          <div class="footer-copyright text-center py-3">© 2020 Copyright</div>-->
+      <!--        </li>-->
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1" href="https://www.facebook.com/pages/category/Social-Club/DOTA-Cougs-102171557852322/">
+          <i class="fab fa-twitter">
+            <img style="width: 80%" src="/images/facebook.png"/>
+          </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1" href="https://twitter.com/mortymortensen">
+          <i class="fab fa-google-plus-g">
+            <img style="width: 80%" src="/images/twitter.png"/>
+          </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <div class="footer-copyright text-center py-3">
+          <a class="copy-right-link" href="https://github.com/BYU-CS-260-Winter-2020/lab-3a-vue-xkcd-browser-Morty-Mortensen"> GitHub </a>
+        </div>
+      </li>
+
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/tyler-mortensen-73a602175?trk=people-guest_people_search-card">
+          <i class="fab fa-linkedin-in">
+            <img style="width: 80%" src="/images/linked_in.png"/>
+          </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1" href="https://www.google.com/">
+          <i class="fab fa-dribbble">
+            <img style="width: 80%; margin-left: -20px" src="/images/google_plus.png"/>
+          </i>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+  <!-- Social buttons -->
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <!--            <div class="footer-copyright text-center py-3">© 2020 Copyright:-->
+  <!--                <a class="copy-right-link" href="https://github.com/Morty-Mortensen/web_development_cs260/"> GitHub </a>-->
+  <!--            </div>-->
+  <!-- Copyright -->
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/script.js"></script>
+<script src="moment.js"></script>
+<script>
+  moment().format();
+</script>
 
 </body>
 
