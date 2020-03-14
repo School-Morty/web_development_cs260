@@ -3,9 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import News from '../views/News.vue'
 import Team from '../views/Team.vue'
-import About from '../views/About.vue'
+import Results from '../views/Results.vue'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -27,16 +27,16 @@ const routes = [
     component: Team
   },
   {
-    path: '/about',
-    name: 'About',
-    component: About
+    path: '/results',
+    name: 'Results',
+    component: Results
   }
-]
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
 export default router
