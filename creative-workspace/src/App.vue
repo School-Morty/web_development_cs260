@@ -3,7 +3,7 @@
 
 
     <!--Begin navigation bar.-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" v-bind:style="{width: setPageWidth()}">
       <router-link class="navbar-brand" to="/">
         <img id="menu-logo" src="./assets/logo.jpg"/>
       </router-link>
@@ -109,18 +109,26 @@
 <script>
   export default {
   name: 'App',
-    // components: {
-    //
-    // }
-
-    // methods: {
-    //   updateIfActive() {
-    //     this.active = !this.active;
-    //   },
+    computed: {
+      pageWidth() {
+        return this.$root.$data.pageWidth;
+      }
+      // return this.$root.$data.pageWidth
+    },
 
     methods: {
         isClicked() {
           this.$root.$data.active = !this.$root.$data.active;
+        },
+        setPageWidth() {
+          if(this.$root.$data.pageWidth > 100)
+          {
+            return '1920px'
+          }
+          else
+          {
+            return 'auto';
+          }
         }
       },
   }
@@ -136,6 +144,11 @@
   text-align: center;
   color: #2c3e50;
 
+}
+
+.max-page-width
+{
+  width: 1920px;
 }
 
 .main-page
@@ -188,6 +201,7 @@ img
   display: flex;
   flex-direction: column;
   background-color: #7E8184 !important;
+  z-index: 100;
 }
 
 .navbar-nav

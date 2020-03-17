@@ -39,52 +39,6 @@ document.getElementById("match-submit").addEventListener("click", function (even
         let results = "";
 
         console.log(json);
-        // results += '<h2>Weather in ' + json.name + "</h2>";
-        // for (let i=0; i < json.weather.length; i++) {
-        //     results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
-        // }
-        // results += '<h2>' + json.main.temp + " &deg;F</h2>"
-        // results += "<p>"
-        // for (let i=0; i < json.weather.length; i++) {
-        //     results += json.weather[i].description + " ";
-        //     if (i !== json.weather.length - 1)
-        //         results += ", "
-        // }
-        // results += "</p>";
-
-
-        // <table>
-        //     <tr>
-        //     <th>name</th>
-        //     <th>height</th>
-        //     <th>place</th>
-        //     </tr>
-        //     <tr>
-        //     <td>Kilimanjaro</td>
-        //     <td>5895</td>
-        //     <td>Tanzania</td>
-        //     </tr>
-        //     </table>
-
-        // let currVisibleDiv = document.getElementById('mountains');
-        // let table = document.createElement('table');
-        // currVisibleDiv.appendChild(table);
-        //
-        // //First section of rows.
-        // let row = document.createElement('tr');
-        // table.appendChild(row);
-        //
-        // //Creates column headers
-        // let arrayOfKeys = Object.keys(MOUNTAINS[0]);
-        // for(let i = 0; i < arrayOfKeys.length; i++)
-        // {
-        //     let tableHeader = document.createElement('th');
-        //     let keyNode = document.createTextNode(arrayOfKeys[i]);
-        //     tableHeader.appendChild(keyNode);
-        //     row.appendChild(tableHeader);
-
-        //     document.createTextNode
-        // }
 
         let team_table_element = document.getElementById("match-results");
         let table = document.createElement('table');
