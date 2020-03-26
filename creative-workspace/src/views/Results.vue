@@ -68,10 +68,18 @@
 
         watch: {
             matchID(newVal) {
-                axios
-                    .get("https://api.opendota.com/api/matches/" + newVal)
-                    .then(response => (this.$root.$data.match = response.data));
-                this.$root.$data.pageWidth = 1920;
+                try{
+                    debugger;
+                    axios
+                        .get("https://api.opendota.com/api/matches/" + newVal)
+                        .then(response => (this.$root.$data.match = response.data));
+                    this.$root.$data.pageWidth = 1920;
+                }
+                catch(err)
+                {
+                    console.log(err);
+                }
+
             }
         },
 

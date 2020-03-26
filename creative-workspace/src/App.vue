@@ -81,7 +81,7 @@
             </li>
             <li class="list-inline-item">
               <div class="footer-copyright text-center py-3">
-                <router-link class="copy-right-link" to="https://github.com/Morty-Mortensen/web_development_cs260/"> GitHub </router-link>
+                <router-link class="copy-right-link" to="https://github.com/Morty-Mortensen/web_development_cs260/tree/master/creative-workspace"> GitHub </router-link>
               </div>
             </li>
 
