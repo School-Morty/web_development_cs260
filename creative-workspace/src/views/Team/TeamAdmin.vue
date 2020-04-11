@@ -151,7 +151,7 @@
                                 const formData = new FormData();
                                 formData.append('photo', this.file, this.file.name);
                                 let pathToPhoto = await axios.post('/api/photos', formData);
-                                let profile = await axios.post('/api/profiles', {
+                                await axios.post('/api/profiles', {
                                     name: this.name,
                                     nickName: this.nickName,
                                     positions: this.positions,

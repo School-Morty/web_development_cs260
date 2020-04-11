@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost:27017/dota', {
 
 const multer = require('multer')
 const upload = multer({
-    dest: '/var/www/web_development_cs260/creative/images/',
+    dest: '../public/images/',
     limits: {
         fileSize: 10000000
     }
