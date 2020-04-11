@@ -1,6 +1,6 @@
 <template>
 
-    <div v-show="$root.$data.match.length !== 0" class="background">
+    <div v-show="this.match !== null" class="background">
 
         <div class="team-table">
             <table class="stats">
@@ -112,7 +112,7 @@
     export default {
         name: "ResultGenerator",
         props: {
-            match: Array
+            match: Object
         },
         methods: {
             isDotacougsRadiant(players)

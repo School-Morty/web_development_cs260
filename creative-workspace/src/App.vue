@@ -30,10 +30,10 @@
           </div>
           <div v-bind:class="[this.$root.$data.active ? '' : 'right-header']">
             <li class="nav-item">
-              <router-link class="nav-link" to="/results">Results</router-link>
+              <router-link class="nav-link" to="/Results/results">Results</router-link>
             </li>
             <li class="nav-item">
-              <router-link id="sign-up-link" class="nav-link" to="https://clubs.byu.edu/clubs#/byudc">Sign Up</router-link>
+              <router-link id="sign-up-link" class="nav-link" to="/signup">Sign Up</router-link>
             </li>
           </div>
         </ul>
@@ -70,31 +70,57 @@
               <div class="footer-copyright text-center py-3 set-copy-right">© 2020 Copyright</div>
             </li>
             <li class="list-inline-item social-media-width">
-              <router-link class="btn-floating btn-tw mx-1" to="https://www.facebook.com/pages/category/Social-Club/DOTA-Cougs-102171557852322/">
+              <router-link class="btn-floating btn-tw mx-1" to="/facebook">
                   <img src="./assets/social-media-images/facebook.png"/>
               </router-link>
             </li>
             <li class="list-inline-item social-media-width">
-              <router-link class="btn-floating btn-gplus mx-1" to="https://twitter.com/mortymortensen">
+              <router-link class="btn-floating btn-gplus mx-1" to="/twitter">
                   <img src="./assets/social-media-images/twitter.png"/>
               </router-link>
             </li>
             <li class="list-inline-item">
               <div class="footer-copyright text-center py-3">
-                <router-link class="copy-right-link" to="https://github.com/Morty-Mortensen/web_development_cs260/tree/master/creative-workspace"> GitHub </router-link>
+                <router-link class="copy-right-link" to="/github"> GitHub </router-link>
               </div>
             </li>
 
             <li class="list-inline-item social-media-width">
-              <router-link class="btn-floating btn-li mx-1" to="https://www.linkedin.com/in/tyler-mortensen-73a602175?trk=people-guest_people_search-card">
+              <router-link class="btn-floating btn-li mx-1" to="/linkdin">
                   <img src="./assets/social-media-images/linked_in.png"/>
               </router-link>
             </li>
             <li class="list-inline-item social-media-width">
-              <router-link class="btn-floating btn-dribbble mx-1" to="https://www.google.com/">
+              <router-link class="btn-floating btn-dribbble mx-1" to="/google">
                   <img src="./assets/social-media-images/google_plus.png"/>
               </router-link>
             </li>
+              <li v-show="this.$root.$data.resultPage" class="list-inline-item social-media-width">
+                <div style="display: flex;">
+                  <router-link class="copy-right-link" to="/Results/ResultsAdmin">
+                    <div style="margin-left: 2px; margin-right: 2px; font-size: 15px">Admin</div>
+                  </router-link>
+                  <p> | </p>
+                  <router-link class="copy-right-link" to="/Results/Results">
+                    <div style="margin-left: 2px; margin-right: 2px; font-size: 15px">Results</div>
+                  </router-link>
+                </div>
+              </li>
+            <li v-show="this.$root.$data.teamPage" class="list-inline-item social-media-width">
+              <div style="display: flex;">
+                <router-link class="copy-right-link" to="/teamAdmin">
+                  <div style="margin-left: 2px; margin-right: 2px; font-size: 15px">Admin</div>
+                </router-link>
+                <p> | </p>
+                <router-link class="copy-right-link" to="/team">
+                  <div style="margin-left: 2px; margin-right: 2px; font-size: 15px">Team</div>
+                </router-link>
+              </div>
+            </li>
+
+
+
+
           </ul>
           <!-- Social buttons -->
 
@@ -109,6 +135,11 @@
 <script>
   export default {
   name: 'App',
+    data() {
+      return {
+        active: false,
+      }
+    },
     computed: {
       pageWidth() {
         return this.$root.$data.pageWidth;
@@ -118,7 +149,7 @@
 
     methods: {
         isClicked() {
-          this.$root.$data.active = !this.$root.$data.active;
+          this.active = !this.active;
         },
         setPageWidth() {
           if(this.$root.$data.pageWidth > 100)

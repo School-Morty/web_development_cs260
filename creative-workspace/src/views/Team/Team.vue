@@ -8,18 +8,44 @@
 </template>
 
 <script>
-    import ProfileList from '../components/ProfileList.vue'
+    import ProfileList from '../../components/ProfileList.vue'
+    import axios from "axios";
+    // import axios from 'axios';
     export default {
         name: "Team",
+        data() {
+            return {
+                profiles: [],
+                isDuplicate: false,
+                errorOccurred: false,
+                success: false,
+                message: "",
+            }
+        },
         mounted() {
             this.$root.$data.pageWidth = 0;
+            this.$root.$data.teamPage = true;
+            this.getProfiles();
+        },
+        beforeDestroy() {
+            this.$root.$data.teamPage = false;
         },
         components: {
             ProfileList
         },
         computed : {
             profile() {
-                return this.$root.$data.profile;
+                return this.profiles;
+            },
+        },
+        methods: {
+            async getProfiles() {
+                try {
+                    let response = await axios.get("/api/profiles");
+                    this.profiles = response.data;
+                } catch (error) {
+                    //check error
+                }
             },
         },
 

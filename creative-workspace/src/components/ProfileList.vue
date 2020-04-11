@@ -8,7 +8,7 @@
                     <p>Hero of Choice: <strong>{{prof.hero}}</strong></p>
                 </div>
                 <div class="profile-images">
-                    <img :src="'/images/profiles/' + prof.image">
+                    <img :src="prof.path">
                 </div>
                 <div class="hero-positions">
                     <h6>- Hero Positions -</h6>
@@ -20,7 +20,6 @@
                     <p>{{prof.bio}}</p>
                 </div>
             </div>
-            <!--Set up the layout for the profiles here-->
         </div>
     </div>
 
