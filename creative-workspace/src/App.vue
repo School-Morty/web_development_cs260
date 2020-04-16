@@ -70,30 +70,30 @@
               <div class="footer-copyright text-center py-3 set-copy-right">© 2020 Copyright</div>
             </li>
             <li class="list-inline-item social-media-width">
-              <router-link class="btn-floating btn-tw mx-1" to="/facebook">
+              <a class="btn-floating btn-tw mx-1" href="https://www.facebook.com/pages/category/Social-Club/DOTA-Cougs-102171557852322/">
                   <img src="./assets/social-media-images/facebook.png"/>
-              </router-link>
+              </a>
             </li>
             <li class="list-inline-item social-media-width">
-              <router-link class="btn-floating btn-gplus mx-1" to="/twitter">
+              <a class="btn-floating btn-gplus mx-1" href="https://twitter.com/mortymortensen">
                   <img src="./assets/social-media-images/twitter.png"/>
-              </router-link>
+              </a>
             </li>
             <li class="list-inline-item">
               <div class="footer-copyright text-center py-3">
-                <router-link class="copy-right-link" to="/github"> GitHub </router-link>
+                <a class="copy-right-link" href="https://github.com/Morty-Mortensen/web_development_cs260/tree/master/creative-workspace"> GitHub </a>
               </div>
             </li>
 
             <li class="list-inline-item social-media-width">
-              <router-link class="btn-floating btn-li mx-1" to="/linkdin">
+              <a class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/tyler-mortensen-73a602175?trk=people-guest_people_search-card">
                   <img src="./assets/social-media-images/linked_in.png"/>
-              </router-link>
+              </a>
             </li>
             <li class="list-inline-item social-media-width">
-              <router-link class="btn-floating btn-dribbble mx-1" to="/google">
+              <a class="btn-floating btn-dribbble mx-1" href="https://www.google.com/">
                   <img src="./assets/social-media-images/google_plus.png"/>
-              </router-link>
+              </a>
             </li>
               <li v-show="this.$root.$data.resultPage" class="list-inline-item social-media-width">
                 <div style="display: flex;">

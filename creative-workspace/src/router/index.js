@@ -45,7 +45,7 @@ const routes = [
   },
   {
     path: '/github',
-    beforeEnter() {location.href = "https://github.com/Morty-Mortensen/web_development_cs260/tree/master/creative"}
+    beforeEnter() {location.href = "https://github.com/Morty-Mortensen/web_development_cs260/tree/master/creative-workspace"}
   },
   {
     path: '/facebook',
