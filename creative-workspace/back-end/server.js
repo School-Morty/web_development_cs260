@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost:27017/dota', {
 
 const multer = require('multer')
 const upload = multer({
-    dest: '../public/images/',
+    dest: '/var/www/web_development_cs260/creative_project/images/',
     limits: {
         fileSize: 10000000
     }
@@ -148,4 +148,4 @@ app.delete('/api/items/:id', async (req, res) => {
 });
 
 
-app.listen(3000, () => console.log('Server listening on port 3000!'));
+app.listen(3002, () => console.log('Server listening on port 3002!'));
